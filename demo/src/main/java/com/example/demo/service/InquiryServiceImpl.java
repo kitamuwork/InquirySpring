@@ -29,4 +29,11 @@ public class InquiryServiceImpl implements InquiryService {
 		return inquiryDao.getAll();
 	}
 
+	@Override
+	public void update(Inquiry inquiry) {
+		if(inquiryDao.updateInquiry(inquiry) == 0) {
+			throw new InquiryNotFoundException("con't find the recode");
+		}
+	}
+
 }

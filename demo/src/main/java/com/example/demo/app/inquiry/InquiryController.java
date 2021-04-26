@@ -31,6 +31,28 @@ public class InquiryController {
 	@GetMapping
 	public String getAll(Model model) {
 		List<Inquiry> list = inquiryService.getAll();
+
+
+/*
+ * updateで更新が１件も存在しないようにするためのコード
+ * 独自クラス「InquiryNotFoundException」を発生する
+ */
+
+//		Inquiry inquiry = new Inquiry();
+//		inquiry.setId(4);
+//		inquiry.setName("qas");
+//		inquiry.setEmail("qaz@qqqq");
+//		inquiry.setContents("asdfg");
+//
+//		inquiryService.update(inquiry);
+
+//		try {
+//			inquiryService.update(inquiry);
+//		}catch(InquiryNotFoundException e) {
+//			model.addAttribute("message", e);
+//			return "error/CustomPage";
+//		}
+
 		model.addAttribute("inquiryList", list);
 		model.addAttribute("title", "ListIndex");
 		return "inquiry/index";
@@ -87,4 +109,10 @@ public class InquiryController {
 		redirectAttributes.addFlashAttribute("complete","登録完了！");
 		return "redirect:/inquiry/form";
 	}
+
+//	@ExceptionHandler(InquiryNotFoundException.class)
+//	public String handleException(InquiryNotFoundException e, Model model) {
+//		model.addAttribute("message", e);
+//		return "error/CustomPage";
+//	}
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="パッケージ名 &apos;com.example.demo.dao&apos; を &apos;com.example.demo.repository&apos; に変更します&#x0A;- 元のプロジェクト: &apos;demo&apos;&#x0A;- オリジナル要素: &apos;demo/src/main/java/com.example.demo.dao&apos;&#x0A;- 名前変更済み要素: &apos;demo/src/main/java/com.example.demo.repository&apos;&#x0A;- リファクタリングされた要素の参照を更新&#x0A;- コメントおよびストリング内のテキスト出現箇所の更新" description="パッケージ名 &apos;com.example.demo.dao&apos; を変更します" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.example.demo.dao" name="com.example.demo.repository" qualified="false" references="true" stamp="1619080656084" textual="false" version="1.0"/>
+</session>
